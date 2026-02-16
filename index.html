@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 </head>
-<body style="font-family: sans-serif; padding: 20px;">
-    <h2>Mi Calculadora de Funciones</h2>
-    <p>Cargando Python... espera un momento.</p>
-    <script type="py">
+<body style="background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 20px;">
+    <h2>📈 Balio Taularen Kalkulagailua</h2>
+    <p>Itxaron pixka bat kontsola kargatu arte...</p>
+
+    <script type="py" terminal>
 import math
 
-# AQUÍ VA TU CÓDIGO LITERAL:
-funtzioa=input("zartu zure funtzioa,adb:(3*x-5):")
-pkopurua=int(input("idatzi zenbat puntu nahi dituzun:"))
-puntuak=[]
+# TU CÓDIGO ORIGINAL SIN TOCAR NADA
+funtzioa = input("zartu zure funtzioa, adb:(3*x-5): ")
+pkopurua = int(input("idatzi zenbat puntu nahi dituzun: "))
+puntuak = []
 for y in range(pkopurua):
-    balioak=float(input("Eman x-eri balio bat:"))
+    balioak = float(input(f"{y+1}. puntua - Eman x-eri balio bat: "))
     puntuak.append(balioak)
     
-print("\nZuk ataratako puntuak:")
+print("\n" + "="*20)
+print("ZUK ATARATAKO PUNTUAK:")
+print("="*20)
+
 for x in puntuak:
     try:
-        y=eval(funtzioa)
-        print(f"puntua:({x},{y})")
-    except:
-        print("x",x,"denean, errore matematiko bat dago.")
+        y = eval(funtzioa)
+        print(f"📍 Puntua: ({x} , {y})")
+    except Exception as e:
+        print(f"❌ Error x={x} denean: {e}")
     </script>
 </body>
 </html>
